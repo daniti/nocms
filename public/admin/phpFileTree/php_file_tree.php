@@ -30,6 +30,7 @@ function php_file_tree_dir($directory, $return_link, $extensions = array(), $fir
 		'.htaccess',
 		'.',
 		'.DS_Store',
+		'.gitignore',
 		'..'
 	];
 
