@@ -1,0 +1,22 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	background: #fff;
+}
+
+.mega {
+	width: 750px;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	background: #fff;
+	line-height: 1.5em;
+	color: #333;
+	text-align: center;
+}
