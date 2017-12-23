@@ -29,6 +29,7 @@ require_once 'inc/login_check.php';
 		<div style="display: none;" class="tree-resources"></div>
 	</div>
 	<button onclick="pubAll()" style="margin-top: 20px">Republish All</button>
+	<p class="logout"><a href="logout.php">Logout</a></p>
 </div>
 <div class="editor">
 	<div>

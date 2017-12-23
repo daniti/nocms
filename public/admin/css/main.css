@@ -92,9 +92,11 @@ a, a:visited {
 .fr {
 	float: right;
 }
+
 .editing {
 	height: calc(100% - 60px);
 }
+
 #texteditor, #editorw {
 	margin-top: 0;
 	width: 100%;
@@ -108,6 +110,7 @@ a, a:visited {
 	float: left;
 	clear: both;
 }
+
 #editorw {
 	height: calc(100% - 20px);
 }
@@ -134,7 +137,7 @@ button:focus {
 	outline: 0;
 }
 
-textarea:focus,[contenteditable]:focus {
+textarea:focus, [contenteditable]:focus {
 	outline: 0px solid transparent;
 }
 
@@ -144,9 +147,18 @@ textarea:focus,[contenteditable]:focus {
 	padding: 0;
 	float: left;
 	width: 100%;
-	font-size: 12px!important;
+	font-size: 12px !important;
 }
 
 .tree {
 	margin-bottom: 10px;
+}
+
+.logout {
+	margin-top: 30px;
+	font-size: 12px;
+}
+
+.logout a {
+	color: #ccc;
 }
