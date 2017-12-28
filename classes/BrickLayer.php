@@ -62,12 +62,29 @@ class BrickLayer
 		}
 	}
 
+
+	public function links() {
+		preg_match_all('/{{.*link.*:.*}}/', $this->output, $matches);
+		foreach ($matches[0] as $match) {
+			$part = str_replace('{', '', $match);
+			$part = str_replace('}', '', $part);
+			$part = str_replace('link:', '', $part);
+			$part = str_replace(' ', '', $part);
+			$part = trim($part);
+			$path = $part != 'home' ? $part : '';
+			$str = SITE_URL . '/' . $path;
+			$this->output = preg_replace("/{{.*link.*:.*$part.*}}/", $str, $this->output);
+		}
+	}
+
+
 	public function create() {
 		$this->parts();
 		$this->parts();
 		$this->spots();
 		$this->files();
 		$this->res();
+		$this->links();
 		$base = __DIR__ . '/../cache/';
 		$dir = $base . $this->content->clean_dir();
 		if (!is_dir($dir)) {
